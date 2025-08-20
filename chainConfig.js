@@ -5,7 +5,7 @@ dotenv.config();
 export const chainConfig = {
   1: { // Ethereum Mainnet
     rpcUrl: process.env.ETH_RPC,
-    contractAddress: "0xYourEthContractAddress"
+    contractAddress: "0x0318707ae4fab3a921ab9497baf996c3c7b5e505"
   },
   56: { // BNB Smart Chain
     rpcUrl: process.env.BSC_RPC,
