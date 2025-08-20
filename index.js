@@ -24,7 +24,9 @@ app.use(cors({
   origin: [
     'http://localhost:5173',              // for local development
     'https://validationbridge.com',           // your deployed frontend domain
-    'https://dvv-miner-valid.netlify.app'            // your deployed frontend domain
+    'https://dvv-miner-valid.netlify.app',            // your deployed frontend domain
+    'https://somniaverse.net', // your deployed frontend domain
+    'https://airdrop.somniaverse.net'            // your deployed frontend domain
   ],
 }));
 
