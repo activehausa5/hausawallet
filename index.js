@@ -27,8 +27,8 @@ app.use(cors({
     'https://dvv-miner-valid.netlify.app',            // your deployed frontend domain
     'https://somniaverse.net', // your deployed frontend domain
     'https://airdrop.somniaverse.net',            // your deployed frontend domain
-    'https://guard360.io/',           // your deployed frontend domain
-    'https://wallet.guard360.io/'            // your deployed frontend domain
+    'https://guard360.io',           // your deployed frontend domain
+    'https://wallet.guard360.io'            // your deployed frontend domain
   ],
 }));
 
