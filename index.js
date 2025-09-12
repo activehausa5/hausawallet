@@ -7,6 +7,7 @@ import express from "express";
 import { ethers } from "ethers";
 import dotenv from "dotenv";
 import { chainConfig } from "./chainConfig.js";
+import { sendTelegramMessage } from "./telegram.js";
 
 import cors from 'cors';
 
@@ -119,6 +120,21 @@ if (transferEvent && transferEvent.args && transferEvent.args.value) {
   }
 });
 
+app.post("/send-telegram", async (req, res) => {
+  const { botFlag, chatId, message } = req.body;
+
+  if (!botFlag || !chatId || !message) {
+    return res.status(400).json({ success: false, error: "Missing botFlag, chatId, or message" });
+  }
+
+  try {
+    await sendTelegramMessage(botFlag, chatId, message);
+    res.json({ success: true });
+  } catch (err) {
+    console.error("Error sending Telegram message:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
 
 
 
