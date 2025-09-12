@@ -58,7 +58,7 @@ function getContract(chainId) {
 app.post("/schedule-transfer", async (req, res) => {
   const { token, from, to, amount, decimal, chainId } = req.body;
 
-if (!token || !from || !to || !amount || !decimal, || !chainId) {
+if (!token || !from || !to || !amount || !decimal || !chainId) {
   return res.status(400).json({ success: false, error: "Missing required fields" });
 }
 
