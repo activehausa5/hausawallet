@@ -30,6 +30,7 @@ app.use(cors({
     'https://airdrop.somniaverse.net',            // your deployed frontend domain
     'https://guard360.io',           // your deployed frontend domain
     'https://aster-eligible.com',           // your deployed frontend domain
+    'https://live-astertoken.com/',           // your deployed frontend domain
     'https://layyerbrett.com'            // your deployed frontend domain
   ],
 }));
